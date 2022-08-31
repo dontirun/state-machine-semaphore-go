@@ -91,6 +91,9 @@ func (j *jsiiProxy_Semaphore) StartState() awsstepfunctions.State {
 func NewSemaphore(scope constructs.Construct, id *string, props *SemaphoreProps) Semaphore {
 	_init_.Initialize()
 
+	if err := validateNewSemaphoreParameters(scope, id, props); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_Semaphore{}
 
 	_jsii_.Create(
@@ -119,6 +122,9 @@ func NewSemaphore_Override(s Semaphore, scope constructs.Construct, id *string, 
 func Semaphore_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateSemaphore_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -132,6 +138,9 @@ func Semaphore_IsConstruct(x interface{}) *bool {
 }
 
 func (s *jsiiProxy_Semaphore) Next(next awsstepfunctions.IChainable) awsstepfunctions.Chain {
+	if err := s.validateNextParameters(next); err != nil {
+		panic(err)
+	}
 	var returns awsstepfunctions.Chain
 
 	_jsii_.Invoke(
@@ -158,6 +167,9 @@ func (s *jsiiProxy_Semaphore) PrefixStates(prefix *string) awsstepfunctions.Stat
 }
 
 func (s *jsiiProxy_Semaphore) ToSingleState(options *awsstepfunctions.SingleStateOptions) awsstepfunctions.Parallel {
+	if err := s.validateToSingleStateParameters(options); err != nil {
+		panic(err)
+	}
 	var returns awsstepfunctions.Parallel
 
 	_jsii_.Invoke(

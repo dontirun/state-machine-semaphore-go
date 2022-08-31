@@ -20,6 +20,9 @@ type jsiiProxy_IChainNextable struct {
 }
 
 func (i *jsiiProxy_IChainNextable) Next(state awsstepfunctions.IChainable) awsstepfunctions.Chain {
+	if err := i.validateNextParameters(state); err != nil {
+		panic(err)
+	}
 	var returns awsstepfunctions.Chain
 
 	_jsii_.Invoke(
