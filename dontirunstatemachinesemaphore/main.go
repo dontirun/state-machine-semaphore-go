@@ -1,3 +1,4 @@
+// Create distributed semaphores using AWS Step Functions and Amazon DynamoDB to control concurrent invocations of contentious work.
 package dontirunstatemachinesemaphore
 
 import (
