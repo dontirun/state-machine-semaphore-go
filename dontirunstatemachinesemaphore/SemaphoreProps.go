@@ -25,6 +25,8 @@ type SemaphoreProps struct {
 	// Optionally set the DynamoDB table to have a specific read/write capacity with PROVISIONED billing.
 	//
 	// Note: This property can only be set on the first instantiation of a `Semaphore` per stack.
+	// Default: PAY_PER_REQUEST.
+	//
 	TableReadWriteCapacity *TableReadWriteCapacity `field:"optional" json:"tableReadWriteCapacity" yaml:"tableReadWriteCapacity"`
 }
 
